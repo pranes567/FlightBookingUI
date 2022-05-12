@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <br>    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>PNR Number</th>
+                <th>Flight Number</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Departure DateTime</th>
+                <th>Arrival DateTime</th>
+                <th>No of Seats </th>
+                <th>Meal Option</th>
+                <th>SeatNo</th>
+                <th>Ticket Cost</th>                
+                <th>Final Price</th>
+                <th>Status</th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of bookhistory">
+                <td>{{i.pnr}}</td>
+                <td>{{i.flightNumber}}</td>
+                <td>{{i.fromPlaceName}}</td>
+                <td>{{i.toPlaceName}}</td>
+                <td>{{i.flightStartDateTime}}</td>
+                <td>{{i.flightToDateTime}}</td>
+                <td>{{i.no_of_Seats}}</td>
+                <td>{{i.meal}}</td>
+                <td>{{i.flightSeatNo}}</td>
+                <td>{{i.ticketCost}}</td>
+                <td>{{i.finalPrice}}</td>
+                <td>{{i.status}}</td>                                
+                <td>
+                    <input type="button" value="Cancel" (click)="onCancelClick(i.pnr)" />                   
+                    
+                </td>
+            </tr>
+        </tbody>
+
+
+    </table>
+</div>

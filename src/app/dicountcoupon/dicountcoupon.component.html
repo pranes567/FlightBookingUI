@@ -1,0 +1,49 @@
+<div id="FlightAdd" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form">
+                    <form #adddiscountform="ngForm" (ngSubmit)="AddDiscountcoupon(adddiscountform.value)">
+                        <div class="form-group">
+                           
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Coupon Code</span>
+                                    <input class="form-control" type="text" name="CouponCode" required ngModel>
+                                </div>
+                            </div>                                                                               
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Coupon Value</span>
+                                    <input class="form-control" type="number" name="couponvalue"
+                                         ngModel>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Remarks</span>
+                                    <input class="form-control" type="text" name="remarks" required ngModel>
+                                </div>
+                            </div>                            
+                        </div>                        
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-btn">
+                                    <button class="submit-btn">Add Coupon</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

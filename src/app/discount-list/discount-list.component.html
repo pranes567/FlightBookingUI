@@ -1,0 +1,39 @@
+<style> 
+
+    
+    .button {
+        background-color: #023803;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+
+<div class="container-fluid">
+    <br>
+    <input type="button" value="Add Coupon" (click)="addcoupon()" *ngIf="isadmin">
+    <table class="table">
+        <thead>
+            <tr>                
+                <th>Coupon Code</th>
+                <th>Coupon Value</th>
+                <th>Remarks</th>                                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of DiscountDetail">                
+                <td>{{i.couponCode}}</td>
+                <td>{{i.couponvalue}}</td>
+                <td>{{i.remarks}}</td>                                           
+                
+            </tr>
+        </tbody>
+
+
+    </table>
+</div>

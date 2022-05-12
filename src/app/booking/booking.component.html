@@ -1,0 +1,136 @@
+
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form">
+                    <form #bookingform="ngForm" (ngSubmit)="BookFlight(bookingform.value)">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Flight Number</span>
+                                    <input class="form-control" type="text" name="flightNumber" required ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Airline</span>
+                                    <input class="form-control" type="text" name="airline" required ngModel>
+                                </div>
+                            </div>                                                       
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Departure</span>
+                                    <input class="form-control" type="text" name="FromPlaceName"
+                                        placeholder="City or airport" ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Arrival</span>
+                                    <input class="form-control" type="text" name="ToPlaceName"
+                                        placeholder="City or airport" ngModel>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Depart DateTime</span>
+                                    <input class="form-control" type="date" name="FlightStartDateTime" required ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Arrival DateTime</span>
+                                    <input class="form-control" type="date" name="FlightToDateTime" required ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <span class="form-label">No of Seats</span>                                    
+                                    <input class="form-control" type="number" name="No_of_Seats" required ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <span class="form-label">Seat NO</span>                                
+                                    <input class="form-control" type="number" name="flightSeatNo" required ngModel>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Travel class</span>
+                                    <select class="form-control">
+                                        <option>Business class</option>
+                                        <option>Non Business class</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Meal Option</span>
+                                    <select class="form-control">
+                                        <option>Veg</option>
+                                        <option>Non Veg</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Ticket Cost</span>
+                                    <input class="form-control" type="number" name="TicketCost" required ngModel>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Apply Coupon</span>
+                                    <select (change)="onChange()" class="form-control">
+                                        <option>No Coupon</option>
+                                        <option>Apply Coupon</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3" *ngIf="iscouponapplied">
+                                <div class="form-group">
+                                    <span class="form-label">Coupon Code</span>
+                                    <input class="form-control" type="text" id="couponcode" name="Couponcode" required ngModel>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>                            
+
+                        </div>
+                        
+                        <!-- <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Final Price</span>
+                                    <input class="form-control" type="number" name="finalPrice" disabled="true" required ngModel>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>                            
+                        </div> -->
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-btn">
+                                    <button class="submit-btn">Book Flight</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

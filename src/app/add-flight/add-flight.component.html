@@ -1,0 +1,87 @@
+<div id="FlightAdd" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form">
+                    <form #addflightform="ngForm" (ngSubmit)="addflightry(addflightform.value)">
+                        <div class="form-group">
+                           
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Flight Number</span>
+                                    <input class="form-control" type="text" name="flightNumber" required ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Airline</span>
+                                    <input class="form-control" type="text" name="airline" required ngModel>
+                                </div>
+                            </div>                                                       
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">From Place</span>
+                                    <input class="form-control" type="text" name="fromPlaceName"
+                                        placeholder="City or airport" ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">To Place</span>
+                                    <input class="form-control" type="text" name="toPlaceName"
+                                        placeholder="City or airport" ngModel>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">From Date</span>
+                                    <input class="form-control" type="date" name="flightStartDateTime" required ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">To Date</span>
+                                    <input class="form-control" type="date" name="flightToDateTime" required ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <span class="form-label" >B-Class Seats</span>
+                                    <input class="form-control" type="number" name="totalBusinessSeats" required ngModel>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <span class="form-label">NB-Class Seats</span>
+                                    <input class="form-control" type="number" name="totalNonBusinessSeats" required ngModel>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Ticket Cost</span>
+                                    <input class="form-control" type="number" name="ticketcost" required ngModel>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-btn">
+                                    <button class="submit-btn">Add Flight</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
